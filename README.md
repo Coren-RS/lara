@@ -1,9 +1,8 @@
 ```bash
-git clone https://github.com/Coren-RS/lara.git ou git clone git@github.com:coren-rs/lara.git se você tiver permissão
+$ git clone https://github.com/Coren-RS/lara.git ou git clone git@github.com:coren-rs/lara.git se você tiver permissão
 
-```bash
-cd lara/
-docker-compose down; docker-compose up -d --build
+$ cd lara/
+$ docker-compose down; docker-compose up -d --build
 ```
 
 Rode de dentro do container que executa o PHP o script "roda_composer_e_permissao.sh", para isso:
