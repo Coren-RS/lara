@@ -1,5 +1,5 @@
 ```bash
-$ git clone https://github.com/Coren-RS/lara.git ou git clone git@github.com:coren-rs/lara.git se você tiver permissão
+$ git clone https://github.com/Coren-RS/lara.git # ou git clone git@github.com:coren-rs/lara.git se você tiver permissão
 
 $ cd lara/
 $ docker-compose down; docker-compose up -d --build
