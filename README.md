@@ -1,5 +1,5 @@
-## Laravel Integrado através do DockerCompose com
-##  PHP 7.2 + Composer + MySQL + phpMyAdmin + Nginx
+## Ambiente completo para Laravel Framework
+##  Laravel + PHP 7.2 + Composer + MySQL + phpMyAdmin + Nginx
 ##### Autor: Fábio Pereira, Analista - Área de Tecnologia da Informação - Coren-RS
 
 #### Instruções
