@@ -27,6 +27,8 @@ De dentro do container, execute:
 
 ```bash
 $ ./roda_composer_e_permissao.sh
+# saia do container:
+$ exit
 ```
 
 PRONTO!
