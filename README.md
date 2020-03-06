@@ -17,9 +17,8 @@ $ docker-compose down; docker-compose up -d --build
 
 Rode de dentro do container que executa o PHP o script "roda_composer_e_permissao.sh", para isso:
 
-Entre no container:
-
 ```bash
+# entre no container:
 $ docker exec -it php_lara bash 
 # de dentro do container, execute:
 $ ./roda_composer_e_permissao.sh
