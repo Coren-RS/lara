@@ -6,7 +6,7 @@
 
 Clone este repositório em seu ambiente local:
 ```bash
-$ git clone https://github.com/Coren-RS/lara.git
+$ git clone https://github.com/coren-rs/lara.git
 # se você tiver permissão você pode usar o git clone git@github.com:coren-rs/lara.git
 ```
 Rode o docker-compose:
