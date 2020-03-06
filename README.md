@@ -34,6 +34,16 @@ A página de boas vindas do Laravel através do endereço http://localhost:8080
 
 E o phpMyAdmin através do endereço http://localhost:8081
 
+Credenciais iniciais do banco para acessar no phpMyAdmin (troque assim que possível):
+
+server: db_lara
+
+usuário: dev
+
+senha: 123456
+
+A senha, usuário e o nome do banco de dados podem ser alterados no arquivo "docker-compose.yml". 
+
 ##### Os arquivos de configuração encontram-se em:
 
 ```
