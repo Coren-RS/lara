@@ -31,7 +31,7 @@ $ ./roda_composer_e_permissao.sh
 $ exit
 ```
 
-PRONTO!
+PRONTO! :sunglasses: :v:
 
 Agora você já pode acessar:
 
