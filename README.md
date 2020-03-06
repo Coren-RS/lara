@@ -45,9 +45,22 @@ E o phpMyAdmin através do endereço http://localhost:8081
 .docker/php/log.conf     para as configurações PHP
 .docker/nginx/site.conf  para as configurações do Nginx
 ```
+Após alterar as configurações, para que elas tenham efeito faça:
+```bash
+$ docker exec -it php_lara bash
+# de dentro do container faça:
+$ nginx -s reload # verfique se este comando gera algum erro, e conserte nas configurações se necessário
+$ exit
+```
 
-##### Os logs de erros e acessos encontram-se na pasta:
+##### Os logs de acessos e erros encontram-se na pasta:
 ```
 .nginx-logs
 ```
 Obs.: Os logs do Nginx, além de seus próprios erros, apresentam também os erros do PHP.
+
+Visualizando os logs em tempo real (PARA LINUX!!!):
+```bash
+tail -f .nginx-logs/access.log  # logs de acessos
+tail -f .nginx-logs/error.log   # logs de erros
+```
