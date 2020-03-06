@@ -33,6 +33,10 @@ Agora você já pode acessar:
 A página de boas vindas do Laravel através do endereço http://localhost:8080
 
 E o phpMyAdmin através do endereço http://localhost:8081
+Credenciais iniciais (troque assim que possível):
+server: db_lara
+usuário: dev
+senha: 123456
 
 ##### Os arquivos de configuração encontram-se em:
 
