@@ -7,6 +7,7 @@ networks:
     
 services:
   nginx_lara:
+    container_name: nginx_lara
     image: nginx:1.17.7
     ports:
       - 8080:80
@@ -26,6 +27,7 @@ services:
     restart: always
 
   php_lara:
+    container_name: php_lara
     build: .docker/php
     volumes:
       - .:/var/www/lara
@@ -35,6 +37,7 @@ services:
     restart: always
 
   db:
+    container_name: db_lara
     image: mysql:8.0.19
     environment:
       - MYSQL_ROOT_PASSWORD=123456
@@ -51,6 +54,7 @@ services:
 
 #######DEV-TOOLS#########
   phpmyadmin:
+    container_name: phpmyadmin_lara
     image: phpmyadmin/phpmyadmin #o mais novo sempre (the latest)
     ports:
       - 8081:80

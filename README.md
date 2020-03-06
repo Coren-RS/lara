@@ -1,5 +1,14 @@
 
-composer install
+Rode de dentro do container que executa o PHP o script "roda_composer_e_permissao.sh", para isso:
 
-sudo su
-find . -type d -exec chmod 0775 {} \; ; sudo find . -type f -exec chmod 0664 {} \; ; sudo find . -name data -type d -exec chmod 0770 {} \; ; chown -R $USER:www-data .;
+Entre no container:
+
+$ docker exec -it php_lara bash 
+
+De dentro do container, execute:
+
+$ ./roda_composer_e_permissao.sh
+
+
+
+
