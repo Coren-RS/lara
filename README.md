@@ -1,4 +1,4 @@
-## Ambiente completo para Laravel Framework
+## Ambiente completo para Laravel
 ##  Laravel + PHP 7.2 + Composer + MySQL + phpMyAdmin + Nginx
 ##### Autor: Fábio Pereira, Analista - Área de Tecnologia da Informação - Coren-RS
 
