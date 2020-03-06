@@ -6,3 +6,7 @@
 .phpunit.result.cache
 npm-debug.log
 yarn-error.log
+
+### FABIO
+.nginx-logs/*
+!.nginx-logs/.gitkeep
