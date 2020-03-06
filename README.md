@@ -45,13 +45,18 @@ E o phpMyAdmin através do endereço http://localhost:8081
 .docker/php/log.conf     para as configurações PHP
 .docker/nginx/site.conf  para as configurações do Nginx
 ```
-Após alterar as configurações, para que elas tenham efeito faça:
+
+Para trocar o nome do domínio ao qual o servidor do lara responde altere a diretiva "server_name" em ".docker/nginx/site.conf".
+
+Após qualquer alteração nas configurações do PHP ou Nginx, para que elas tenham efeito faça:
 ```bash
-$ docker exec -it php_lara bash
+$ docker exec -it nginx_lara bash
 # de dentro do container faça:
 $ nginx -s reload # verfique se este comando gera algum erro, e conserte nas configurações se necessário
 $ exit
 ```
+
+Para trocar as portas dos servidores Nginx e phpMyAdmin faça a alteração no arquivo "dockercompose.yml" que se encontra na raiz do projeto.
 
 ##### Os logs de acessos e erros encontram-se na pasta:
 ```
