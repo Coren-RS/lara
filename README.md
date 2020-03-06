@@ -21,11 +21,7 @@ Entre no container:
 
 ```bash
 $ docker exec -it php_lara bash 
-```
-
-De dentro do container, execute:
-
-```bash
+# de dentro do container, execute:
 $ ./roda_composer_e_permissao.sh
 # saia do container:
 $ exit
