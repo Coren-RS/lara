@@ -65,4 +65,5 @@ services:
       - lara
     depends_on:
       - db
+    restart: always
 
