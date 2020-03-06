@@ -36,7 +36,7 @@ services:
       - lara
     restart: always
 
-  db:
+  db_lara:
     container_name: db_lara
     image: mysql:8.0.19
     environment:
