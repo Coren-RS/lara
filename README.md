@@ -52,7 +52,11 @@ $ nginx -s reload # verfique se este comando gera algum erro, e conserte nas con
 $ exit
 ```
 
-Para trocar as portas dos servidores Nginx e phpMyAdmin faça a alteração no arquivo "dockercompose.yml" que se encontra na raiz do projeto.
+Para trocar as portas dos servidores Nginx e phpMyAdmin faça a alteração no arquivo "dockercompose.yml" que se encontra na raiz do projeto. Para que tenha efeito rode:
+```bash
+docker-compose down; docker-compose up -d --build
+tail -f .nginx-logs/error.log   # logs de erros
+```
 
 ##### Os logs de acessos e erros encontram-se na pasta:
 ```
