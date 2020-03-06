@@ -31,7 +31,7 @@ $ ./roda_composer_e_permissao.sh
 $ exit
 ```
 
-PRONTO! :sunglasses: :v:
+##### PRONTO! :sunglasses: :v:
 
 Agora você já pode acessar:
 
@@ -39,4 +39,15 @@ A página de boas vindas do Laravel através do endereço http://localhost:8080
 
 E o phpMyAdmin através do endereço http://localhost:8081
 
+##### Os arquivos de configuração encontram-se em:
 
+```
+.docker/php/log.conf     para as configurações PHP
+.docker/nginx/site.conf  para as configurações do Nginx
+```
+
+##### Os logs de erros e acessos encontram-se na pasta:
+```
+.nginx-logs
+```
+Obs.: Os logs do Nginx, além de seus próprios erros, apresentam também os erros do PHP.
