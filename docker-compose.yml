@@ -1,0 +1,64 @@
+version: '3'
+#######NETWORK/STORAGE#########
+volumes:
+  db_data: #volume utilizado pelo banco de dados
+networks:
+  lara:
+    
+services:
+  nginx_lara:
+    image: nginx:1.17.7
+    ports:
+      - 8080:80
+    environment:
+      - APP_ENV=development
+      - APP_DEBUG=true
+      - TZ=America/Sao_Paulo
+    volumes:
+      - .:/var/www/lara
+      - ./.nginx-logs:/var/log/nginx
+      - ./.docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - lara
+    depends_on:
+      - php_lara
+      - db
+    restart: always
+
+  php_lara:
+    build: .docker/php
+    volumes:
+      - .:/var/www/lara
+      - ./.docker/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+    networks:
+      - lara
+    restart: always
+
+  db:
+    image: mysql:8.0.19
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=banco
+      - MYSQL_USER=dev
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_HOST=%
+      - TZ=America/Sao_Paulo
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - lara
+    restart: always
+
+#######DEV-TOOLS#########
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin #o mais novo sempre (the latest)
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+      - TZ=America/Sao_Paulo
+    networks:
+      - lara
+    depends_on:
+      - db
+
