@@ -12,7 +12,7 @@ $ git clone https://github.com/coren-rs/lara.git
 Rode o docker-compose:
 ```bash
 $ cd lara/ # necessário pois o comando seguinte deve ser rodado na raiz do projeto
-$ docker-compose down; docker-compose up -d --build
+$ docker-compose up -d --build
 ```
 
 Rode de dentro do container que executa o PHP o script "roda_composer_e_permissao.sh", para isso:
@@ -21,6 +21,7 @@ Rode de dentro do container que executa o PHP o script "roda_composer_e_permissa
 # entre no container:
 $ docker exec -it php_lara bash 
 # de dentro do container, execute:
+$ chmod +x roda_composer_e_permissao.sh
 $ ./roda_composer_e_permissao.sh
 # saia do container:
 $ exit
