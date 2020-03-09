@@ -28,7 +28,8 @@ services:
 
   php_lara:
     container_name: php_lara
-    build: .docker/php
+    image: binhodap/php
+    #build: .docker/php
     volumes:
       - .:/var/www/lara
       - ./.docker/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
