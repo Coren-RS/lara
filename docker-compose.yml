@@ -23,7 +23,7 @@ services:
       - lara
     depends_on:
       - php_lara
-      - db
+      - db_lara
     restart: always
 
   php_lara:
