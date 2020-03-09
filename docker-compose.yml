@@ -64,6 +64,6 @@ services:
     networks:
       - lara
     depends_on:
-      - db
+      - db_lara
     restart: always
 
