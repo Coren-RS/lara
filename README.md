@@ -54,17 +54,14 @@ A senha, usuário e o nome do banco de dados podem ser alterados no arquivo "doc
 
 Para trocar o nome do domínio ao qual o servidor do lara responde altere a diretiva "server_name" em ".docker/nginx/site.conf".
 
-Após qualquer alteração nas configurações do PHP ou Nginx, para que elas tenham efeito faça:
+Após qualquer alteração nas configurações do PHP ou Nginx, para que elas tenham efeito recarregue as configurações do Nginx:
 ```bash
-$ docker exec -it nginx_lara bash
-# de dentro do container faça:
-$ nginx -s reload # verfique se este comando gera algum erro, e conserte nas configurações se necessário
-$ exit
+$ docker exec -it nginx_lara nginx -s reload
 ```
 
 Para trocar as portas dos servidores Nginx e phpMyAdmin faça a alteração no arquivo "docker-compose.yml" que se encontra na raiz do projeto. Para que tenha efeito rode:
 ```bash
-docker-compose down; docker-compose up -d --build
+docker-compose up -d
 ```
 
 ##### Os logs de acessos e erros encontram-se na pasta:
